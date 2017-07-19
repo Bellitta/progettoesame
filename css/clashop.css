@@ -1,0 +1,35 @@
+article.post {
+      	border-bottom: 1px solid #999999;
+      }
+      article.comment {
+      	border-bottom: 1px solid #999999;
+      	background-color: #B9D9EA;/*padding: 5px;*/
+      }
+      .colonna {
+      /*border-right: 1px solid #999999;*/
+                    /*padding-right: 1.5em;
+                    padding-left: 1.5em;*/
+      }
+
+      img.prodotto {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        max-width: 150px;
+      }
+
+      img.dettaglio_prodotto {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        max-width: 250px;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        border-top: 1px solid #e5e5e5;
+        background-color: #f5f5f5;
+      }
