@@ -20,6 +20,10 @@
 		.testocarousel {
 			font: italic bold 30px Georgia, Serif;
 		}
+		
+		#messaggioErrore {
+			font italic bold 30px Georgia, Serif;
+		}
 	</style>
    
      </head>
@@ -84,7 +88,7 @@
  <br> <br>
 <h1> Effettua il login </h1>
 <div class="row">
-    <form action="do_registra.php" method="post" class="form-horizontal"> 
+    <form action="do_login.php" method="post" class="form-horizontal"> 
 	    <div class="form-group">
 		    <label for ="email" class="col-sm-4 control-label"> E-mail </label>
 			<div class="col-sm-8">
@@ -104,6 +108,26 @@
 		   <button type="submit" class="btn btn-warning"> Login </button>
 		   </div>
 		</div>
+		<div class="form-group">
+		    <div class="col-sm-offset-4" id="messaggioErrore">
+			</div>
+		</div>
+		<?php
+		    $codiceErrore = $_REQUEST["errore"];
+			if ($codiceErrore==1)
+				$messaggio = "Utente non registrato";
+			else 
+				if ($codiceErrore==2)
+			        $messaggio ="Password errata";
+				else
+					$messaggio = "";
+			echo "<script type='text/javascript'>";
+			echo "$('#messaggioErrore').append ('$messaggio');";
+			
+			echo "</script>"; 
+			
+				
+		?>
 	
     </form>	
 </div>
